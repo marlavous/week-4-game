@@ -1,51 +1,67 @@
- var targetNumber = 53;
+ //create a number for player to match, randomly generated between 19-120
+var counter = 0;
+var numOfcrystals = [1, 2, 3, 4];
+var minNum = 19;
+var maxNum = 120;
+var targetNumber = randomNum(minNum, maxNum);  ///this is the number they need to match
+var crystalValue = [];
+var wins = [];
+var losses = [];
+var currentScore = [];
+var myImages = [
+    "assets/images/madhatter.png",
+    "assets/images/cheshirecat.png",
+    "assets/images/caterpillar.png",
+    "assets/images/whiterabbit.png",
+  ]; 
 
-  $("#number-to-guess").text(targetNumber);
+//$(document).ready(function(){}  wrapn this around all of the functions  
 
-  var counter = 0;
+function randomNum (min,max){
+  return Math.floor(Math.random()*(max-min+1)+min);
+}
+$("#number-to-guess").html(targetNumber);
+ 
+///functions above this line work fine
 
-  // Now for the hard part. Creating multiple crystals each with their own unique number value.
 
-  // We begin by expanding our array to include four options.
-  var numberOptions = [10, 5, 3, 7];
 
-  // Next we create a for loop to create crystals for every numberOption.
-  for (var i = 0; i < numberOptions.length; i++) {
 
-    // For each iteration, we will create an imageCrystal
+
+
+/////////me me me mememmememmmememmmememmememmememmemmemmememmemememememememmememememememmmmememememememmeemme
+  // create a for loop to create crystals 
+  
+
+  for (var i = 0; i < numOfcrystals.length; i++) {
     var imageCrystal = $("<img>");
+    imageCrystal.addClass("crystal-image");
+    imageCrystal.attr("src", myImages[i]);
+    imageCrystal.attr("data-crystalvalue", Math.floor(Math.random() * 12) + 1);
+    $(".crystals").append(imageCrystal);
+    }
 
     // First each crystal will be given the class ".crystal-image".
     // This will allow the CSS to take effect.
-    imageCrystal.addClass("crystal-image");
-
     // Each imageCrystal will be given a src link to the crystal image
-    imageCrystal.attr("src", "http://cdn.playbuzz.com/cdn/35910209-2844-45c0-b099-f4d82878d54f/00261fda-4062-4096-81fd-8cf96b9034e8.jpg");
-
     // Each imageCrystal will be given a data attribute called data-crystalValue.
     // This data attribute will be set equal to the array value.
-    imageCrystal.attr("data-crystalvalue", numberOptions[i]);
-
     // Lastly, each crystal image (with all it classes and attributes) will get added to the page.
-    $("#crystals").append(imageCrystal);
-  }
-
-  // This time, our click event applies to every single crystal on the page. Not just one.
-  $(".crystal-image").on("click", function() {
-
-    // Determining the crystal's value requires us to extract the value from the data attribute.
-    // Using the $(this) keyword specifies that we should be extracting the crystal value of the clicked crystal.
-    // Using the .attr("data-crystalvalue") allows us to grab the value out of the "data-crystalvalue" attribute.
-    // Since attributes on HTML elements are strings, we must convert it to an integer before adding to the counter
+    // give each crystal its own picture
     
+
+
+    //$("#nextbutton3").prepend($('<img>',{id:"nextbutton3",src:'assets/images/cheshirecat.png'}));
+  
+
+  // THIS WORKS DONT TOUCH!!!now each crystal gets its own randomly generated number that is <=12.
+  $(".crystal-image").on("click", function() {    
     var crystalValue = ($(this).attr("data-crystalvalue"));
     crystalValue = parseInt(crystalValue);
-    // We then add the crystalValue to the user's "counter" which is a global variable.
-    // Every click, from every crystal adds to the global counter.
     counter += crystalValue;
 
-    // All of the same game win-lose logic applies. So the rest remains unchanged.
-    alert("New score: " + counter);
+    //show their current score here  ("New score: " + counter);
+    $("#currentScore").text("New score:" + counter);
 
     if (counter === targetNumber) {
       alert("You win!");
@@ -55,4 +71,15 @@
       alert("You lose!!");
     }
 
+    console.log(crystalValue)
+    console.log(counter)
+    console.log(currentScore)
   });
+
+
+
+
+
+
+
+

@@ -2,40 +2,44 @@
 <html lang="en-us">
 <head>
   <meta charset="UTF-8">
-  <title>Marlavous game</title>
+  <title>Marlavous Crystal Game</title>
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   
-  <style type="text/css">
-
-    .crystal-image {
-      width: 200px;
-      height: 200px;
-      padding: 25px;
-    }
-  </style>
 
 </head>
 <body>
+  <!--$(document).ready(function(){}   do I need this? tbd-->
+   
+  
+  <h3>number to match: <span id="number-to-guess"></span></h5>
 
-  <h1>Number to Guess: <span id="number-to-guess"></span></h1>
-
-  <!-- Note that this div is now empty. We will fill it dynamically -->
-  <div id="crystals">
+  <!-- this div is empty. We will fill it dynamically -->
+  <div class = "crystals">
+    <!-- <input type="button" class="finish" id="cheshirecat" src="assets/images/cheshirecat.png">
+    <input type="button" class="finish" id="madhatter" src="assets/images/madhatter.png">
+    <input type="button" class="finish" id="caterpillar" src="assets/images/caterpillar.png">
+    <input type="button" class="finish" id="whiterabbit" src="assets/images/whiterabbit.png">-->
   </div>
 
-  <!-- MY JAVASCRIPT
-  
-    -->
-  <!-- ========================================= -->
+  <div id="currentScore"></div>
+  <div id="wins"></div>
+  <div id="losses"></div>
+
+
+
+
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+   
   <script type="text/javascript" src="assets/javascript/game.js"></script></script>
 
-  
 
 
- 
+
+
+
+
   
 </script>
 </body>

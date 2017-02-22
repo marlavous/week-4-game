@@ -1,0 +1,10 @@
+body{
+    background-image: : "assets/images/alicebackground.png";
+
+}
+
+.crystal-image {
+      width: 200px;
+      height: 200px;
+      padding: 25px;
+    }
