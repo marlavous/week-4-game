@@ -4,43 +4,103 @@
   <meta charset="UTF-8">
   <title>Marlavous Crystal Game</title>
   <meta name="viewport" content="width=device-width">
+  <!-- Added a link to my styles-->
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  
+  <!-- Added a link to Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!-- Added link to the jQuery Library -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 
 </head>
 <body>
-  <!--$(document).ready(function(){}   do I need this? tbd-->
-   
-  
-  <h3>number to match: <span id="number-to-guess"></span></h5>
 
-  <!-- this div is empty. We will fill it dynamically -->
-  <div class = "crystals">
-    <!-- <input type="button" class="finish" id="cheshirecat" src="assets/images/cheshirecat.png">
-    <input type="button" class="finish" id="madhatter" src="assets/images/madhatter.png">
-    <input type="button" class="finish" id="caterpillar" src="assets/images/caterpillar.png">
-    <input type="button" class="finish" id="whiterabbit" src="assets/images/whiterabbit.png">-->
+
+
+  <!-- Make a title-->
+  <div class = "row">
+     <div class = "col-sm-6">
+      <div class="panel panel-primary">
+        <h3 id = "title">Alice in Wonderland Character Collector!</h3>
+      </div>
+    </div>
   </div>
 
-  <div id="currentScore"></div>
-  <div id="wins"></div>
-  <div id="losses"></div>
+  <div class = "mainContainer">
+    <!-- paragraph explaining the game-->
+    <div class = "instructions">
+      <div class = "row">
+        <div class = "col-sm-4">
+          <div class="panel panel-primary">
+          <p> You will be given a random number at the start of the game.<br>
 
+          There are four characters below. By clicking on a character you will add a specific amount of points to your total score.<br>
 
+          You win the game by matching your total score to a random number, you lose the game if your total score goes above the random number.<br>
 
+          The value of each character is hidden from you until you click on it.<br>
 
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-   
-  <script type="text/javascript" src="assets/javascript/game.js"></script></script>
+          Each time the game starts the values of each character will change.<br>
 
-
-
-
-
-
+          Have Fun!!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   
-</script>
+
+  <div class = "scoresContainer">
+     <!-- number to match here-->
+    <div class = "row">
+       <div class = "col-xs-2">
+        <div class="panel panel-primary">
+          <h4 class = "title">Number to Match:</h4>
+          <h5 id = "number-to-guess">Number to Match:</h5>
+        </div>
+      </div>
+    
+
+         <!-- show wins and losses-->
+      <div class = "row"> 
+        <div class = "col-xs-2">
+          <div class="panel panel-primary">
+            <h5 id = "wins">Wins:</h5>
+          </div>
+          <div class="panel panel-primary">
+              <h5 id = "losses">Losses:</h5>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+   
+  <!-- images of crystals-->
+  <div class = "crystalContainer">
+    <div class = "row">
+      <div class = "crystals"></div>
+    </div>
+  </div>
+
+  <!-- show players score for the round-->
+  <div class = "tallyContainer">
+    <div class = "row">
+       <div class = "col-sm-2">
+        <div class="panel panel-primary">
+          <h5 id = "currentScore">Your score:  </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+   
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+
 </body>
 </html>
