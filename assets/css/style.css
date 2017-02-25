@@ -1,30 +1,15 @@
 body{
 	background-image: url("../images/background.jpg");
-
 }
 
-.mainContainer {
-	position: relative;
-	bottom:0;
-	right: 0;
-  
+p{
+	padding: 10px;
 }
 
 .crystal-image {
       width: 200px;
       height: 200px;
       padding: 15px;
-    }
-
-#title{
-	color: purple;
-	font-family: "Apple Chancery";
-	font-weight: bolder;
-	margin: 5px;
-	padding: 10px;
-	position: center;
-	font-size: 25px;
-	
 }
 
 .scoresContainer{
@@ -39,16 +24,17 @@ body{
 	padding-left: 25px;
 }
 
+.title{
+	color: purple;
+	padding-left: 10px;
+	font-family: "Apple Chancery";
+}
+
 .instructions{
 	font-family: "Apple Chancery";
 	font-weight: bolder;
 	color: purple;
 	padding-left: 25px;
-}
-
-p{
-	padding: 10px;
-
 }
 
 #wins{
@@ -70,17 +56,27 @@ p{
 	font-size: 33px;
 }
 
+#title{
+	color: purple;
+	font-family: "Apple Chancery";
+	font-weight: bolder;
+	margin: 0 0 10px 10px;
+	padding: 10px;
+	position: center;
+	font-size: 25px;
+	
+}
+
 #currentScore{
 	color: purple;
 	padding-left: 15px;
 	font-family: "Apple Chancery";
+	font-weight: bolder;
+	font-size: 23px;
 }
 
 
-.title{
-	color: purple;
-	padding-left: 10px;
-}
+
 
 
 
